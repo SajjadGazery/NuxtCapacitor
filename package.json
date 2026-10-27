@@ -1,0 +1,45 @@
+{
+  "name": "nuxt-capacitor-starter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "nuxt dev",
+    "dev:host": "nuxt dev --host 0.0.0.0",
+    "build": "nuxt generate",
+    "generate": "nuxt generate",
+    "preview": "serve .output/public --single",
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck",
+    "cap:sync": "npm run build && cap sync",
+    "android:add": "npm run build && cap add android",
+    "android:sync": "npm run build && cap sync android",
+    "android:open": "cap open android",
+    "android:run": "npm run android:sync && cap run android",
+    "android:apk": "powershell -NoProfile -File scripts/build-android.ps1",
+    "ios:add": "npm run build && cap add ios",
+    "ios:sync": "npm run build && cap sync ios",
+    "ios:open": "cap open ios",
+    "ios:run": "npm run ios:sync && cap run ios"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.5.3",
+    "@capacitor/core": "^8.5.3",
+    "@capacitor/haptics": "^8.0.2",
+    "@capacitor/ios": "^8.5.3",
+    "@capacitor/preferences": "^8.0.0",
+    "nuxt": "^3.21.11",
+    "vue": "^3.5.22",
+    "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.5.3",
+    "@types/node": "^22.19.0",
+    "serve": "^14.2.6",
+    "typescript": "~5.9.3",
+    "vue-tsc": "^3.3.13"
+  }
+}

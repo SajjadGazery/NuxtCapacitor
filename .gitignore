@@ -1,0 +1,41 @@
+# Dependencies and Nuxt output
+node_modules/
+.nuxt/
+.output/
+dist/
+.data/
+.cache/
+coverage/
+artifacts/
+*.log
+
+# Local settings and secrets
+.env
+.env.*
+!.env.example
+.DS_Store
+.idea/
+.vscode/
+
+# Keep native sources; ignore generated build files and bundled web assets.
+android/.gradle/
+android/.kotlin/
+android/build/
+android/app/build/
+android/local.properties
+android/captures/
+android/app/src/main/assets/public/
+android/app/src/main/assets/capacitor.config.json
+android/app/src/main/assets/capacitor.plugins.json
+android/capacitor-cordova-android-plugins/
+*.jks
+*.keystore
+
+ios/App/build/
+ios/App/Pods/
+ios/App/App/public/
+ios/App/App/capacitor.config.json
+ios/App/App/config.xml
+ios/capacitor-cordova-ios-plugins/
+**/xcuserdata/
+DerivedData/
